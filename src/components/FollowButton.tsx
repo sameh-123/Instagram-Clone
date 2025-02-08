@@ -12,7 +12,6 @@ export default function FollowButton({
   followSession: Follow | null;
 }) {
   const [isFollow, setIsFollow] = useState(!!followSession);
-  console.log(isFollow);
   return (
     <form
       action={async (data: FormData) => {

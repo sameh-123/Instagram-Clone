@@ -115,7 +115,6 @@ export async function removeBook(data: FormData) {
 export async function addFollow(data: FormData) {
   const userEmail = await getEmail();
   const otherUserEmail = data.get('email') as string;
-  console.log(userEmail, otherUserEmail);
   await prisma.follow.create({
     data: {
       follower: userEmail,
@@ -126,7 +125,6 @@ export async function addFollow(data: FormData) {
 export async function removeFollow(data: FormData) {
   const userEmail = await getEmail();
   const otherUserEmail = data.get('email') as string;
-  console.log(userEmail, otherUserEmail);
   await prisma.follow.deleteMany({
     where: {
       follower: userEmail,

@@ -26,26 +26,38 @@ export default function DeskTopNav() {
       <div className="sticky top-0 w-48 lg:w-56 p-5">
         <Image src={logo} alt="instagram" className="dark:invert" />
         <div className="flex flex-col gap-8 p-4 *:flex *:items-center *:gap-2">
-          <Link href="/" className={`${active == 0 ? 'text-igRed' : ''}`}>
+          <Link
+            href="/"
+            className={`${active == 0 ? 'text-igRed' : ''} hover:text-igRed`}
+          >
             <HomeIcon />
             Home
           </Link>
-          <Link href="/search" className={`${active == 1 ? 'text-igRed' : ''}`}>
+          <Link
+            href="/search"
+            className={`${active == 1 ? 'text-igRed' : ''} hover:text-igRed`}
+          >
             <SearchIcon />
             Search
           </Link>
-          <Link href="/browse" className={`${active == 2 ? 'text-igRed' : ''}`}>
+          <Link
+            href="/browse"
+            className={`${active == 2 ? 'text-igRed' : ''} hover:text-igRed`}
+          >
             <LayoutGridIcon />
             Browse
           </Link>
           <Link
             href="/profile"
-            className={`${active == 3 ? 'text-igRed' : ''}`}
+            className={`${active == 3 ? 'text-igRed' : ''} hover:text-igRed`}
           >
             <UserIcon />
             Profile
           </Link>
-          <Link href="/create" className={`${active == 4 ? 'text-igRed' : ''}`}>
+          <Link
+            href="/create"
+            className={`${active == 4 ? 'text-igRed' : ''} hover:text-igRed`}
+          >
             <CameraIcon />
             New Post
           </Link>

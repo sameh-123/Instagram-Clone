@@ -5,6 +5,7 @@ import { prisma } from '@/db';
 import logo from '/public/ig.png';
 import google from '/public/google.png';
 import Image from 'next/image';
+import SettingsBar from '@/components/SettingsBar';
 export default async function Home() {
   const session = await auth();
   if (!session) {
@@ -61,6 +62,7 @@ export default async function Home() {
   });
   return (
     <div className="container mx-auto ">
+      <SettingsBar/>
       <StatusBar profiles={profiles} />
       <HomePosts posts={posts} Email={myEmail} />
     </div>

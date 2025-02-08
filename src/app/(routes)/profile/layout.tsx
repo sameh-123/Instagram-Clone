@@ -21,7 +21,6 @@ export default function ProfileLayout({
     const getData = async () => {
       const data = await fetch('/api/profile');
       const Profile = await data.json();
-      console.log(Profile);
       setProfile(Profile);
     };
     getData();

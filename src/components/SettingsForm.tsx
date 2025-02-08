@@ -51,7 +51,6 @@ export default function SettingsForm({ profile }: { profile: profile | null }) {
             className="hidden"
             ref={ref}
             onChange={(e) => {
-              // console.log(e.target.files)
               setFile(e.target.files?.[0] || null);
             }}
           />
@@ -59,7 +58,6 @@ export default function SettingsForm({ profile }: { profile: profile | null }) {
             variant="surface"
             type="button"
             onClick={() => {
-              // console.log(ref.current?.files)
               ref.current?.click();
             }}
           >
